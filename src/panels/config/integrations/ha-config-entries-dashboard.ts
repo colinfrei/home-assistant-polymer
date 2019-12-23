@@ -43,6 +43,7 @@ import { DataEntryFlowProgress } from "../../../data/data_entry_flow";
 export class HaConfigManagerDashboard extends LitElement {
   @property() public hass!: HomeAssistant;
   @property() public showAdvanced!: boolean;
+  @property() public isWide!: boolean;
 
   @property() private configEntries!: ConfigEntry[];
 
@@ -65,6 +66,7 @@ export class HaConfigManagerDashboard extends LitElement {
   protected render(): TemplateResult {
     return html`
       <hass-subpage
+        .back=${!this.isWide}
         header=${this.hass.localize("ui.panel.config.integrations.caption")}
       >
         ${this.configEntriesInProgress.length

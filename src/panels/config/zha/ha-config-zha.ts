@@ -39,7 +39,7 @@ export class HaConfigZha extends LitElement {
 
   protected render(): TemplateResult | void {
     return html`
-      <hass-subpage header="Zigbee Home Automation">
+      <hass-subpage header="Zigbee Home Automation" .back=${!this.isWide}>
         <zha-network
           .isWide="${this.isWide}"
           .hass="${this.hass}"

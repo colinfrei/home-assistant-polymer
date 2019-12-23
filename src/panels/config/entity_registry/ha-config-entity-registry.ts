@@ -132,6 +132,7 @@ class HaConfigEntityRegistry extends LitElement {
         header="${this.hass.localize(
           "ui.panel.config.entity_registry.caption"
         )}"
+        .back=${!this.isWide}
       >
       <div class="content">
         <div class="intro">
@@ -216,14 +217,14 @@ class HaConfigEntityRegistry extends LitElement {
       }
       h2 {
         margin-top: 0;
-        font-family: var(--paper-font-display1_-_font-family);
+        font-family: var(--paper-font-headline_-_font-family);
         -webkit-font-smoothing: var(
-          --paper-font-display1_-_-webkit-font-smoothing
+          --paper-font-headline_-_-webkit-font-smoothing
         );
-        font-size: var(--paper-font-display1_-_font-size);
-        font-weight: var(--paper-font-display1_-_font-weight);
-        letter-spacing: var(--paper-font-display1_-_letter-spacing);
-        line-height: var(--paper-font-display1_-_line-height);
+        font-size: var(--paper-font-headline_-_font-size);
+        font-weight: var(--paper-font-headline_-_font-weight);
+        letter-spacing: var(--paper-font-headline_-_letter-spacing);
+        line-height: var(--paper-font-headline_-_line-height);
         opacity: var(--dark-primary-opacity);
       }
       p {
@@ -231,10 +232,8 @@ class HaConfigEntityRegistry extends LitElement {
         -webkit-font-smoothing: var(
           --paper-font-subhead_-_-webkit-font-smoothing
         );
-        font-size: var(--paper-font-subhead_-_font-size);
         font-weight: var(--paper-font-subhead_-_font-weight);
         line-height: var(--paper-font-subhead_-_line-height);
-        opacity: var(--dark-primary-opacity);
       }
       .intro {
         padding: 24px 16px 0;
